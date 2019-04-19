@@ -3,8 +3,8 @@ const merge = require('webpack-merge')
 const base=require('./webpack.base')
 
 const config=merge(base,{
-    entry:'./src/index.js',
-    // entry:['webpack-hot-middleware/client?path=/__webpack_hmr&timeout=2000&reload=true','./src/index.js'],
+    // entry:'./src/index.js',
+    entry:['webpack-hot-middleware/client?path=/__webpack_hmr&timeout=2000&reload=true','./src/test.ts'],
     mode:"development",
     devtool: '#cheap-module-source-map',
     plugins:[
