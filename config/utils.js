@@ -12,9 +12,7 @@ let getEntries=function(gloPath){
     let pattern = jsDir+'/**/index.ts'
     let entries=glob.sync(pattern,{nodir:true})
     let reJsDir=jsDir.replace(/\\/g,"/")
-    //G:\webpacktest\webpacktest\src
     for(let i=0;i<entries.length;i++){
-        // console.log(entries[i].replace(jsDir,""))
         let entryName=entries[i].replace(reJsDir+"/","").replace("/index.ts","")
         _entries[entryName]=entries[i]
     }
