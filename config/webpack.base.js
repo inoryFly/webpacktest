@@ -53,8 +53,6 @@ const base = {
           },
          ]
     },
-    plugins: [new CleanWebpackPlugin(), new HtmlWebpackPlugin({
-        template:"./index.html"
-    })]
+    plugins: [new CleanWebpackPlugin()]
 }
 module.exports = base
