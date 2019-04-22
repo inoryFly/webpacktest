@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "baseUrl": ".",
+        "paths":{
+            "@js/*":["public/js/*"]
+        }
+    },
+    // "include": [
+    //     "./src/**/*",
+    //     "other.d.ts"
+    // ]
+}

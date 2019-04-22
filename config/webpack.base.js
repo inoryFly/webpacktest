@@ -1,12 +1,22 @@
 // const webpack = require('webpack')
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const utils=require('./utils')
+
+let entries=utils.getEntries('src')
+let plugins=utils.getHtmlWebpackPlugin(entries)
 
 const base = {
+    
     output: {
         filename: "[name].[hash].js",
         path: path.resolve(__dirname, "./../dist")
+    },
+    resolve:{
+      alias:{
+        '@js':path.resolve(__dirname,"../public/js")
+      },
+      extensions:['.ts','.js','.less']
     },
     module:{
         rules: [{
@@ -16,14 +26,16 @@ const base = {
             use:['ts-loader']
         },{
             test: /\.css$/,
+            exclude:/node_modules/,
             use: ['style-loader',
-                'css-loader',
+               'css-loader',
                 'postcss-loader'
             ]
         },{
             test: /\.less$/,
+            exclude:/node_modules/,
             use: ['style-loader',
-                'css-loader',
+            'css-loader',
                 'postcss-loader',
                 'less-loader',
             ]
@@ -53,6 +65,6 @@ const base = {
           },
          ]
     },
-    plugins: [new CleanWebpackPlugin()]
+    plugins: [new CleanWebpackPlugin(),...plugins]
 }
 module.exports = base

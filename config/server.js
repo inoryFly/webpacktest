@@ -23,9 +23,9 @@ app.use(instance)
 //2
 app.use(webpackHotMiddleware(compiler))
 instance.waitUntilValid(()=>{
-    console.log("> Listening at localhost:8000"+"\n")
-    opn("http://localhost:8000")
+    console.log("> Listening at http://:localhost:7000/index"+"\n")
+    // opn("http://localhost:7000/index")
 })
 //3
-app.listen(8000,() => console.log('Test environment listening on port 8000!'))
+app.listen(7000,() => console.log('Test environment listening on port 8000!'))
 /**其实有个一二三步基本就满足我的本地测试了 */
