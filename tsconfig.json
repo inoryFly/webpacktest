@@ -1,7 +1,20 @@
 {
     "compilerOptions": {
+<<<<<<< HEAD
         "allowJs": true,
         "experimentalDecorators": true,
         // "strict": true
     }
+=======
+        "strict": true,
+        "baseUrl": ".",
+        "paths":{
+            "@js/*":["public/js/*"]
+        }
+    },
+    // "include": [
+    //     "./src/**/*",
+    //     "other.d.ts"
+    // ]
+>>>>>>> cb8641e0f3701d0b428077f9b7701c7804f6cbdb
 }

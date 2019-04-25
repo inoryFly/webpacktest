@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 console.log('ok')
 
 let gg=document.createElement("div")
@@ -17,3 +18,11 @@ btn.addEventListener('click',function(){
         console.log(response)
     })
 })
+=======
+import  './index.less'
+import names from "@js/common"
+console.log(names)
+// console.log(styles)
+// let content=`<span class=${styles.root}>測試</span>`
+// document.body.innerHTML+=content
+>>>>>>> cb8641e0f3701d0b428077f9b7701c7804f6cbdb
