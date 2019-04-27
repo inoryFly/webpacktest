@@ -8,24 +8,65 @@
 </head>
 <style>
     .test{
-        width: 60%;
-        height: 400px;
+        width: 400px;
+        height: 300px;
         background-color: rgba(5,7,15,0.6);
         position: relative;
     }
-    .test2{
-        height: 500px;
-        background-color: red;
-    }
-    .borders{
-        width: 100%;
-        height: 400px;
-        position: absolute;
-        top: 0;
-    }
-    .boder2{
-        height: 500px;
-    }
+   .title{
+       position: absolute;
+       top:10px;
+       left: 30px;
+       z-index: 20;
+   }
+   .borderwrap{
+    width: 400px;
+       height: 300px;
+       position: absolute;
+       top:0;
+       left: 0;
+       z-index: 0;
+   }
+   .echartsWrap{
+       position: absolute;
+       left:12px;
+       top:12px;
+   }
+   .buttonWrap{
+       position: absolute;
+       font-size: 14px;
+       right: 20px;
+       top:20px;
+       display: flex;
+       line-height: 20px;
+       z-index: 20;
+   }
+   .leftbutton{
+       background-color: blue;
+       color: black;
+       padding: 4px;
+       border:1px solid blue;
+       border-right: none;
+   }
+   .rightbutton{
+       background-color: blue;
+       color: black;
+       padding: 4px;
+       border:1px solid blue;
+       border-left: none;
+   }
+   .active{
+       background-color: #ff790d;
+       border-color:#ff790d;
+       color: white;
+   }
+   .bottomWrap{
+       width: 100%;
+       position: absolute;
+       z-index: 20;
+       bottom:30px;
+       text-align: center;
+   }
 </style>
 <body>
     我是test
